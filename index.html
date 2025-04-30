@@ -4,8 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Masak0 Merchandise</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure the body takes up the full viewport height */
+            margin: 0; /* Remove default margin */
+            background-image: url('./background.png'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+        }
+
+        main {
+            flex: 1; /* Push the footer to the bottom */
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8); /* Optional: Add a background color for better visibility */
+        }
+    </style>
 </head>
 <body>
+    <main>
+        <section class="container my-5">
+            <div class="blur-overlay text-center">
+                <h1>Hi! Welcome to Project Masako</h1>
+                <p class="lead">Your one-stop destination to know more about me and my work</p>
+            </div>
+        </section>
+
+        <section class="container">
+            <!-- Additional content can go here -->
+        </section>
+    </main>
+
+    <footer class="text-center p-3">
+        <nav class="mt-4 md:mt-0 flex space-x-8 text-white font-mono text-lg">
+            <a href="#" class="hover:text-red-500">Home</a>
+            <a href="#" class="hover:text-red-500">Clothing</a>
+            <a href="#" class="hover:text-red-500">Studio Albums</a>
+            <a href="#" class="hover:text-red-500">About Us</a>
+        </nav>
+        <div class="container">
+            <p>&copy; 2025 Sakai Inc. | Contact: greatdiggerassociation@gmail.com</p>
+        </div>
+    </footer>
     
 </body>
 </html>
