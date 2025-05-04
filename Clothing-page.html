@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <title>Project Masako Browsing Page</title>
+    <title>Clothing Browsing Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background: url('../5.png') no-repeat center center fixed; /* Use background.png as the full-page background */
-            background-size: cover;
-            color: gray;
+            background-color: black; /* Black background */
+            color: white;
             display: flex;
             flex-direction: column;
             min-height: 100vh; /* Ensures full height of the page */
@@ -26,7 +25,7 @@
         nav {
             display: flex;
             justify-content: center;
-            align-items: center; /* Ensures vertical alignment */
+            align-items: center;
             background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black */
             padding: 1rem 0;
         }
@@ -38,36 +37,24 @@
         nav a:hover {
             text-decoration: underline;
         }
-        .search-container {
-            display: flex;
-            align-items: center;
-            margin-left: 1rem;
-        }
-        .search-container input[type="text"] {
-            padding: 0.5rem;
-            border: none;
-            border-radius: 4px;
-        }
-        .search-container button {
-            padding: 0.5rem 1rem;
-            margin-left: 0.5rem;
-            background-color: #555;
+        .btn-custom {
+            background-color: #6f0000;
             color: white;
             border: none;
-            border-radius: 4px;
-            cursor: pointer;
         }
-        .search-container button:hover {
-            background-color: #777;
+        .btn-custom:hover {
+            background-color: #8b0000; /* Slightly lighter shade for hover effect */
         }
-        
-        .content {
-            text-align: center;
-            margin: 2rem 1rem;
-            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black for readability */
+        .clothing-container {
+            margin: 2rem auto;
             padding: 2rem;
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black for readability */
             border-radius: 8px;
-            margin-top: auto; /* Pushes the content to the bottom */
+        }
+        .clothing-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
         }
         footer {
             background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
@@ -76,24 +63,13 @@
             padding: 1rem;
             margin-top: auto; /* Ensures footer stays at the bottom */
         }
-        .btn-custom {
-            background-color: #6f0000;
-            color: white;
-            border: none;
-        }
-
-        .btn-custom:hover {
-            background-color: #8b0000; /* Slightly lighter shade for hover effect */
-        }
-        .container {
-            color: gray;
-        }
     </style>
 </head>
 <body>
     <header>
         <h1>Welcome to Project Masako</h1>
     </header>
+
     <div class="container">
         <div class="btn-group" role="group" aria-label="Basic example">
             <a href="index.html" class="btn btn-custom">Home</a>
@@ -102,8 +78,65 @@
             <a href="Aboutus-page.html" class="btn btn-custom">About Us</a>
         </div>
     </div>
+
+    <div class="container clothing-container">
+        <h2 class="text-center mb-4">Browse Our Clothing</h2>
+        <div class="row g-4">
+            <!-- Clothing Item 1 -->
+            <div class="col-md-4">
+                <div class="clothing-item">
+                    <img src="tshirt1.jpg" alt="T-Shirt 1" class="img-fluid">
+                    <h5 class="mt-2 text-center">Graphic T-Shirt</h5>
+                    <p class="text-center">$25.00</p>
+                </div>
+            </div>
+            <!-- Clothing Item 2 -->
+            <div class="col-md-4">
+                <div class="clothing-item">
+                    <img src="hoodie1.jpg" alt="Hoodie 1" class="img-fluid">
+                    <h5 class="mt-2 text-center">Stylish Hoodie</h5>
+                    <p class="text-center">$45.00</p>
+                </div>
+            </div>
+            <!-- Clothing Item 3 -->
+            <div class="col-md-4">
+                <div class="clothing-item">
+                    <img src="jacket1.jpg" alt="Jacket 1" class="img-fluid">
+                    <h5 class="mt-2 text-center">Modern Jacket</h5>
+                    <p class="text-center">$60.00</p>
+                </div>
+            </div>
+            <!-- Clothing Item 4 -->
+            <div class="col-md-4">
+                <div class="clothing-item">
+                    <img src="pants1.jpg" alt="Pants 1" class="img-fluid">
+                    <h5 class="mt-2 text-center">Casual Pants</h5>
+                    <p class="text-center">$35.00</p>
+                </div>
+            </div>
+            <!-- Clothing Item 5 -->
+            <div class="col-md-4">
+                <div class="clothing-item">
+                    <img src="shoes1.jpg" alt="Shoes 1" class="img-fluid">
+                    <h5 class="mt-2 text-center">Sneakers</h5>
+                    <p class="text-center">$50.00</p>
+                </div>
+            </div>
+            <!-- Clothing Item 6 -->
+            <div class="col-md-4">
+                <div class="clothing-item">
+                    <img src="hat1.jpg" alt="Hat 1" class="img-fluid">
+                    <h5 class="mt-2 text-center">Baseball Cap</h5>
+                    <p class="text-center">$20.00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer>
-        <p>© Sakai inc. All rights reserved.</p>
+        <p>© Sakai Inc. All rights reserved.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-Q6E6E5+2Z5J5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous"></script>
 </body>
 </html>
