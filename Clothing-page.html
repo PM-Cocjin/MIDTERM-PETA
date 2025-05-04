@@ -3,9 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <title>Project Masako Browsing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: url('../5.png') no-repeat center center fixed; /* Use background.png as the full-page background */
+            background-size: cover;
+            color: gray;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensures full height of the page */
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Ensures vertical alignment */
+            background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black */
+            padding: 1rem 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .search-container {
+            display: flex;
+            align-items: center;
+            margin-left: 1rem;
+        }
+        .search-container input[type="text"] {
+            padding: 0.5rem;
+            border: none;
+            border-radius: 4px;
+        }
+        .search-container button {
+            padding: 0.5rem 1rem;
+            margin-left: 0.5rem;
+            background-color: #555;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .search-container button:hover {
+            background-color: #777;
+        }
+        
+        .content {
+            text-align: center;
+            margin: 2rem 1rem;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black for readability */
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: auto; /* Pushes the content to the bottom */
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: auto; /* Ensures footer stays at the bottom */
+        }
+        .btn-custom {
+            background-color: #6f0000;
+            color: white;
+            border: none;
+        }
+
+        .btn-custom:hover {
+            background-color: #8b0000; /* Slightly lighter shade for hover effect */
+        }
+        .container {
+            color: gray;
+        }
+    </style>
 </head>
 <body>
-    
+    <header>
+        <h1>Welcome to Project Masako</h1>
+    </header>
+    <div class="container">
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <a href="index.html" class="btn btn-custom">Home</a>
+            <a href="Clothing-page.html" class="btn btn-custom">Clothing</a>
+            <a href="Album-page.html" class="btn btn-custom">Studio Albums</a>
+            <a href="Aboutus-page.html" class="btn btn-custom">About Us</a>
+        </div>
+    </div>
+    <footer>
+        <p>© Sakai inc. All rights reserved.</p>
+    </footer>
 </body>
 </html>
