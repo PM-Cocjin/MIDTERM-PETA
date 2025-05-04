@@ -33,36 +33,57 @@
         .btn-custom:hover {
             background-color: #8b0000; /* Slightly lighter shade for hover effect */
         }
-        
+
+        .container {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .slides {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            background-color: black;
+        }
     </style>
 </head>
 <body>
     <main>
         <section class="container my-5">
             <div class="blur-overlay text-center">
-                    <div class="col">
-                        <h1 style="font-family: 'JetBrains Mono', monospace;">Welcome to Project Masako</h1>
-                        <p class="lead" style="font-family: 'JetBrains Mono', monospace; color: red;">0 kendrick lamar initiative 0</p>
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                            <a href="index.html" class="btn btn-custom">Home</a>
-                            <a href="Clothing-page.html" class="btn btn-custom">Clothing</a>
-                            <a href="Album-page.html" class="btn btn-custom">Studio Albums</a>
-                            <a href="Aboutus-page.html" class="btn btn-custom">About Us</a>
-                        </div>
+                <div class="col">
+                    <h1 style="font-family: 'JetBrains Mono', monospace;">Welcome to Project Masako</h1>
+                    <p class="lead" style="font-family: 'JetBrains Mono', monospace; color: red;">0 kendrick lamar initiative 0</p>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <a href="index.html" class="btn btn-custom">Home</a>
+                        <a href="Clothing-page.html" class="btn btn-custom">Clothing</a>
+                        <a href="Album-page.html" class="btn btn-custom">Studio Albums</a>
+                        <a href="Aboutus-page.html" class="btn btn-custom">About Us</a>
                     </div>
-                    <div class="col">
-                        <img src="logo.png" alt="Logo" class="img-fluid" style="width: 50%;">
-                    </div>                   
                 </div>
+                <div class="col">
+                    <img src="logo.png" alt="Logo" class="img-fluid" style="width: 50%;">
+                </div>                   
             </div>
         </section>
 
         <div class="container">
-            <div class="slides position-relative">
-                <img src="background.png.jpg" alt="Background" class="img-fluid">
+            <div class="slides">
+                <img src="background.png.jpg" alt="Background" class="img-fluid" style="width: 100%; height: auto; border-radius: 15px;">
             </div>
         </div>
 
+        <!-- Move the lorem ipsum text here -->
+        <div class="container my-5">
+            <div class="slides">
+                <h4 class="text-center" style="font-family: 'JetBrains Mono', monospace; color: white;">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </h4>
+            </div>
+        </div>
     </main>
 
     <footer class="text-center p-3">
