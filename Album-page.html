@@ -1,11 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Studio Albums</title>
+  <style>
+    /* Layout styles */
+    body {
+      background-color: #000000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      min-height: 100vh;
+      margin: 0;
+      font-family: sans-serif;  
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Three columns */
+      gap: 100px; /* Increase space between cards */
+      max-width: 800px; /* Limit the grid width */
+      margin: 0 auto; /* Center the grid horizontally */
+      justify-content: center; /* Center the grid items horizontally */
+      align-content: center; /* Center the grid items vertically */
+      padding-bottom: 100px; /* Bottom spacing */
+    }
+
+    /* Uiverse Card Flip CSS by ElSombrero2 */
+    .card {
+      overflow: visible;
+      width: 190px;
+      height: 254px;
+      position: relative;
+      perspective: 1000px;
+    }
+
+    .content {
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 300ms;
+      box-shadow: 0px 0px 10px 1px #000000ee;
+      border-radius: 5px;
+      position: relative;
+    }
+
+    .front, .back {
+      background-color: #151515;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .back {
+      justify-content: center;
+      display: flex;
+      align-items: center;
+    }
+
+    .back::before {
+      position: absolute;
+      content: ' ';
+      display: block;
+      width: 160px;
+      height: 160%;
+      background: linear-gradient(90deg, transparent, #ff9966, #ff9966, #ff9966, #ff9966, transparent);
+      animation: rotation_481 5000ms infinite linear;
+    }
+
+    .back-content {
+      position: absolute;
+      width: 99%;
+      height: 99%;
+      background-color: #000000;
+      border-radius: 5px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .card:hover .content {
+      transform: rotateY(180deg);
+    }
+
+    @keyframes rotation_481 {
+      0% {
+        transform: rotateZ(0deg);
+      }
+      100% {
+        transform: rotateZ(360deg);
+      }
+    }
+
+    .front {
+      transform: rotateY(180deg);
+      color: white;
+    }
+
+    .front .front-content {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .front-content .badge {
+      background-color: #00000055;
+      padding: 2px 10px;
+      border-radius: 10px;
+      backdrop-filter: blur(2px);
+      width: fit-content;
+    }
+
+    .description {
+      box-shadow: 0px 0px 10px 5px #00000088;
+      width: 100%;
+      padding: 10px;
+      background-color: #00000099;
+      backdrop-filter: blur(5px);
+      border-radius: 5px;
+    }
+
+    .title {
+      font-size: 11px;
+      max-width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .title p {
+      width: 50%;
+    }
+
+    .card-footer {
+      color: #ffffff88;
+      margin-top: 5px;
+      font-size: 8px;
+    }
+
+    .front .img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for smaller screens */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .grid {
+        grid-template-columns: 1fr; /* Single column for very small screens */
+      }
+    }
+
+    .description {
+      background-color: transparent; /* Remove the gray background */
+      box-shadow: none; /* Remove any shadow */
+      padding: 0; /* Remove padding */
+      margin: 0; /* Remove margin */
+    }
+
+    .front-content {
+      background-color: transparent; /* Ensure no background color */
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/node-vibrant/3.1.6/vibrant.min.js"></script>
 </head>
 <body>
-    
+
+  <div class="grid">
+
+    <!-- SECTION.80 -->
+    <div class="card">
+      <div class="content">
+        <div class="front">
+          <img src="images1/section80.jpg" class="img" alt="Card Image">
+          <div class="front-content">
+            <div class="badge">Section.80</div>
+            <div class="Kendrick Lamar's debut studio album">
+              <div class="Released on July 2, 2011 under Top Dawg Entertainment (TDE).">
+                <p>Title</p><span></span>
+              </div>
+              <p class="card-footer">Released on July 2, 2011 under Top Dawg Entertainment (TDE).</p>
+            </div>
+          </div>
+        </div>
+        <div class="back">
+          <div class="back-content">
+            <img src="images1/section.80vinyl.png" alt="Section.80" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GKMC -->
+    <div class="card">
+      <div class="content">
+        <div class="front">
+          <img src="images1/gkmc.jpg" class="img" alt="Card Image">
+          <div class="front-content">
+            <div class="badge">good kid, m.A.A.d city</div>
+            <div class="">
+              <div class="title">
+                <p>good kid, m.A.A.d city</p>
+                <span></span>
+              </div>
+              <p class="card-footer">Released on October 22, 2012, by Interscope Records, Top Dawg Entertainment and Dr. Dre's Aftermath Entertainment.</p>
+            </div>
+          </div>
+        </div>
+        <div class="back">
+          <div class="back-content">
+            <img src="images1/gkmcvinyl.png" alt="good kid, m.A.A.d city" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TPAB -->
+    <div class="card">
+      <div class="content">
+        <div class="front">
+          <img src="images1/tpab.jpg" class="img" alt="Card Image">
+          <div class="front-content">
+            <div class="badge">To Pimp a Butterfly</div>
+            <div class="">
+              <div class="title">
+                <p>To Pimp a Butterfly</p>
+                <span></span>
+              </div>
+              <p class="card-footer">Released on March 15, 2015, by Top Dawg Entertainment, Aftermath Entertainment and Interscope Records.</p>
+            </div>
+          </div>
+        </div>
+        <div class="back">
+          <div class="back-content">
+            <img src="images1/tpabvinyl.png" alt="To Pimp a Butterfly" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAMN. -->
+    <div class="card">
+      <div class="content">
+        <div class="front">
+          <img src="images1/damn.jpg" class="img" alt="Card Image">
+          <div class="front-content">
+            <div class="badge">DAMN.</div>
+            <div class="">
+              <div class="title">
+                <p>DAMN.</p>
+                <span></span>
+              </div>
+              <p class="card-footer">Released on April 14, 2017, through Top Dawg Entertainment, Aftermath Entertainment, and Interscope Records.</p>
+            </div>
+          </div>
+        </div>
+        <div class="back">
+          <div class="back-content">
+            <img src="images1/damnvinyl.png" alt="Back Image" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MMATBS -->
+    <div class="card">
+      <div class="content">
+        <div class="front">
+          <img src="images1/mmatbs.png" class="img" alt="Card Image">
+          <div class="front-content">
+            <div class="badge">Mr. Morale & The Big Steppers</div>
+            <div class="description">
+              <div class="title">
+                <p>Mr. Morale & The Big Steppers</p>
+                <span></span>
+              </div>
+              <p class="card-footer">Released on May 13, 2022, by PGLang, Top Dawg Entertainment (TDE), Aftermath Entertainment, and Interscope Records.</p>
+            </div>
+          </div>
+        </div>
+        <div class="back">
+          <div class="back-content">
+            <img src="images1/mmatbsvinyl.png" alt="Mr. Morale and The Big Steppers" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GNX -->
+    <div class="card">
+      <div class="content">
+        <div class="front">
+          <img src="images1/gnx.png" class="img" alt="Card Image">
+          <div class="front-content">
+            <div class="badge">GNX</div>
+            <div class="">
+              <div class="title">
+                <p>GNX</p>
+                <span></span>
+              </div>
+              <p class="card-footer">A suprise release on November 22, 2024, through PGLang and Interscope Records.</p>
+            </div>
+          </div>
+        </div>
+        <div class="back">
+          <div class="back-content">
+            <img src="images1/gnxvinyl.png" alt="GNX" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Select all cards
+    const cards = document.querySelectorAll('.card');
+
+    // Function to change the theme
+    function changeTheme(image) {
+      // Use Vibrant.js to extract the color palette
+      const vibrant = new Vibrant(image);
+      vibrant.getPalette().then((palette) => {
+        // Get the dominant color and a secondary color
+        const dominantColor = palette.Vibrant.hex;
+        const secondaryColor = palette.Muted.hex;
+
+        // Apply the colors to the body
+        document.body.style.backgroundColor = dominantColor;
+        document.body.style.color = secondaryColor;
+      });
+    }
+
+    // Add event listeners to each card
+    cards.forEach((card) => {
+      const img = card.querySelector('.img'); // Select the image inside the card
+
+      card.addEventListener('mouseenter', () => {
+        changeTheme(img); // Change theme when the card is hovered
+      });
+
+      card.addEventListener('mouseleave', () => {
+        // Revert to default theme when hover ends
+        document.body.style.backgroundColor = '#1e1e1e';
+        document.body.style.color = 'white';
+      });
+    });
+  </script>
+
 </body>
 </html>
