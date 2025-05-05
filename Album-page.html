@@ -9,12 +9,12 @@
     body {
       background-color: #000000;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
       padding: 40px;
       min-height: 100vh;
       margin: 0;
-      font-family: sans-serif;  
+      font-family: 'JetBrains Mono', monospace;  
     }
 
     .grid {
@@ -26,6 +26,23 @@
       justify-content: center; /* Center the grid items horizontally */
       align-content: center; /* Center the grid items vertically */
       padding-bottom: 100px; /* Bottom spacing */
+    }
+
+    .btn-custom {
+      background-color: #6f0000;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1rem;
+      margin-bottom: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-custom:hover {
+      background-color: #8b0000; /* Slightly lighter shade for hover effect */
     }
 
     /* Uiverse Card Flip CSS by ElSombrero2 */
@@ -64,16 +81,6 @@
       align-items: center;
     }
 
-    .back::before {
-      position: absolute;
-      content: ' ';
-      display: block;
-      width: 160px;
-      height: 160%;
-      background: linear-gradient(90deg, transparent, #ff9966, #ff9966, #ff9966, #ff9966, transparent);
-      animation: rotation_481 5000ms infinite linear;
-    }
-
     .back-content {
       position: absolute;
       width: 99%;
@@ -90,15 +97,6 @@
 
     .card:hover .content {
       transform: rotateY(180deg);
-    }
-
-    @keyframes rotation_481 {
-      0% {
-        transform: rotateZ(0deg);
-      }
-      100% {
-        transform: rotateZ(360deg);
-      }
     }
 
     .front {
@@ -169,21 +167,12 @@
         grid-template-columns: 1fr; /* Single column for very small screens */
       }
     }
-
-    .description {
-      background-color: transparent; /* Remove the gray background */
-      box-shadow: none; /* Remove any shadow */
-      padding: 0; /* Remove padding */
-      margin: 0; /* Remove margin */
-    }
-
-    .front-content {
-      background-color: transparent; /* Ensure no background color */
-    }
   </style>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/node-vibrant/3.1.6/vibrant.min.js"></script>
 </head>
 <body>
+
+  <!-- Back to Home Button -->
+  <a href="index.html" class="btn-custom">Back to Home</a>
 
   <div class="grid">
 
@@ -191,20 +180,15 @@
     <div class="card">
       <div class="content">
         <div class="front">
-          <img src="images1/section80.jpg" class="img" alt="Card Image">
+          <img src="images1/section80.jpg" class="img" alt="Section.80">
           <div class="front-content">
             <div class="badge">Section.80</div>
-            <div class="Kendrick Lamar's debut studio album">
-              <div class="Released on July 2, 2011 under Top Dawg Entertainment (TDE).">
-                <p>Title</p><span></span>
-              </div>
-              <p class="card-footer">Released on July 2, 2011 under Top Dawg Entertainment (TDE).</p>
-            </div>
+            <p class="card-footer">Released on July 2, 2011 under Top Dawg Entertainment (TDE).</p>
           </div>
         </div>
         <div class="back">
           <div class="back-content">
-            <img src="images1/section.80vinyl.png" alt="Section.80" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="images1/section.80vinyl.png" alt="Section.80 Vinyl" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
         </div>
       </div>
@@ -330,41 +314,6 @@
       </div>
     </div>
   </div>
-
-  <script>
-    // Select all cards
-    const cards = document.querySelectorAll('.card');
-
-    // Function to change the theme
-    function changeTheme(image) {
-      // Use Vibrant.js to extract the color palette
-      const vibrant = new Vibrant(image);
-      vibrant.getPalette().then((palette) => {
-        // Get the dominant color and a secondary color
-        const dominantColor = palette.Vibrant.hex;
-        const secondaryColor = palette.Muted.hex;
-
-        // Apply the colors to the body
-        document.body.style.backgroundColor = dominantColor;
-        document.body.style.color = secondaryColor;
-      });
-    }
-
-    // Add event listeners to each card
-    cards.forEach((card) => {
-      const img = card.querySelector('.img'); // Select the image inside the card
-
-      card.addEventListener('mouseenter', () => {
-        changeTheme(img); // Change theme when the card is hovered
-      });
-
-      card.addEventListener('mouseleave', () => {
-        // Revert to default theme when hover ends
-        document.body.style.backgroundColor = '#1e1e1e';
-        document.body.style.color = 'white';
-      });
-    });
-  </script>
 
 </body>
 </html>
